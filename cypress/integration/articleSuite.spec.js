@@ -25,14 +25,9 @@ describe('Article suite', () => {
 
   it('should create a new article', () => {
     homePage.navigateToLoginPage()
-    loginPage.typeEmail(user.email)
-      .typePassword(user.password)
-      .submitLogin()
+    loginPage.login(user.email, user.password)
     homePage.navigateToCreationArticlePage()
-    creationArticlePage.typeTitle(article.title)
-      .typeDescription(article.description)
-      .typeBody(article.body)
-      .submitCreation()
+    creationArticlePage.createNewArticle(article.title, article.description, article.body)
     articleDetailPage.getTitle().should('to.contain', article.title)
     articleDetailPage.getBody().should('to.contain', article.body)
     articleDetailPage.navigateToHomePage()

@@ -1,17 +1,9 @@
 
-export class LoginPage {
+class LoginPage {
 
-  typeEmail(email) {
+  login(email, password) {
     cy.get('input[placeholder="Email"]').type(email);
-    return this;
-  }
-
-  typePassword(password) {
     cy.get('input[placeholder="Password"]').type(password);
-    return this;
-  }
-
-  submitLogin() {
     cy.get('form button[type="submit"]').click();
   }
 

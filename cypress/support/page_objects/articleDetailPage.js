@@ -1,5 +1,5 @@
 
-export class ArticleDetailPage {
+class ArticleDetailPage {
 
   navigateToHomePage() {
     cy.contains('Home').click()
@@ -13,12 +13,8 @@ export class ArticleDetailPage {
     return cy.get('.article-content').find('p')
   }
 
-  typeComment() {
-    cy.get('form textarea')
-    return this
-  }
-
-  submitPostingComment() {
+  postComment(comment) {
+    cy.get('form textarea').type(comment)
     cy.get('form button[type="submit"]').click();
   }
 

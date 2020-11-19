@@ -1,5 +1,5 @@
 
-export class HomePage {
+class HomePage {
 
   navigateToLoginPage() {
     cy.get('a[routerlink="/login"]').click()

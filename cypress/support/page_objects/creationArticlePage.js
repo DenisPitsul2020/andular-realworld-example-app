@@ -1,22 +1,10 @@
 
-export class CreationArticlePage {
+class CreationArticlePage {
 
-  typeTitle(title) {
+  createNewArticle(title, description, body) {
     cy.get('input[formcontrolname="title"]').type(title)
-    return this
-  }
-
-  typeDescription(description) {
     cy.get('input[formcontrolname="description"]').type(description)
-    return this
-  }
-
-  typeBody(body) {
     cy.get('textarea[formcontrolname="body"]').type(body)
-    return this
-  }
-
-  submitCreation() {
     cy.get('form button[type="button"]').click();
   }
 

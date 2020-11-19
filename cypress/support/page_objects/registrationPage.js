@@ -1,5 +1,5 @@
 
-export class RegistrationPage {
+class RegistrationPage {
 
   typeUserName(userName) {
     cy.get('[placeholder="Username"]').type(userName);
